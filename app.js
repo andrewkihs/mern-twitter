@@ -20,16 +20,6 @@ mongoose
   .then(() => console.log("Connected to MongoDB successfully"))
   .catch((err) => console.log(err));
 
-// app.get("/", (req, res) => {
-//   const user = new User({
-//     handle: "jim",
-//     email: "jim@jim.jim",
-//     password: "jimisgreat123",
-//   });
-//   user.save();
-//   res.send("Nodemon working");
-// });
-
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use("/api/users", users);
